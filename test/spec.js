@@ -25,8 +25,9 @@ test('get html', function(t){
 
 test('set html', function(t){
     var div = document.createElement('div')
-      , html = '<p>he<b>l</b>lo</p>'
+      , html = '<p>a</p><p>b</p>'
     DOM.html(div, html)
-    t.equal(div.innerHTML, html)
+    t.equal(div.getElementsByTagName('p').length, 2)
+    t.equal(div.getElementsByTagName('p')[1].textContent, 'b')
     t.end()
 })
