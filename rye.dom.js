@@ -71,20 +71,20 @@
         element.textContent = text
     }
 
-    function html = function (element, html) {
+    function html (element, html) {
         if (html == null) {
             return element.innerHTML
         }
         element.innerHTML = html
     }
 
-    function empty = function (element) {
+    function empty (element) {
         while (element.firstChild) {
             elem.removeChild(elem.firstChild)
         }
     }
 
-    function clone = function (deep) {
+    function clone (deep) {
         return element.cloneNode(deep === false ? false : true)
     }
 
@@ -113,7 +113,7 @@
         return getAttribute(element, name)
     }
 
-    function prop = function (element, name, value) {
+    function prop (element, name, value) {
         if (typeof name === 'object') {
             var keys = Object.keys(name)
             while (key = keys.pop()) element[key] = name[key]
