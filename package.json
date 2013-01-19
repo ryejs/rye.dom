@@ -6,7 +6,8 @@
     "dependencies": {
     },
     "devDependencies": {
-        "tape": "*"
+        "tape": "*",
+        "es5-shim": "*"
     },
     "testling": {
       "files": "test/*.js",

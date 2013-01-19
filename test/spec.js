@@ -1,5 +1,6 @@
 var test = require('tape')
-  , DOM = require('../rye.dom')
+  , shim = require('es5-shim')
+  , DOM  = require('../rye.dom')
 
 test('get text', function(t){
     var div = document.createElement('div')
