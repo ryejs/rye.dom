@@ -1,4 +1,8 @@
-Rye.define('DOM', function(){
+(function(name, deps, definition){
+    if (typeof module !== 'undefined') module.exports = definition(require)
+    else if (typeof define === 'function') define(name, deps, definition)
+    else window[name] = definition(function(name){ return window[name] })
+})('rye/dom', [], function(require){
 
     var _slice = Array.prototype.slice
 
